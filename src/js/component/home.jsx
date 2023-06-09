@@ -57,8 +57,6 @@ const Home = () => {
 				<div className="d-flex taskCounter2">
 				</div>
 			</div>
-			
-			
 		</div>
 	);
 };
