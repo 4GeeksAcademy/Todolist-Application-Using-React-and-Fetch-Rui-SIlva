@@ -1,12 +1,74 @@
+.container {
+    width: 60%;
+    height: auto;
+}
+.mainContainer {
+    box-shadow: 0px -50px 50px 15px rgba(0, 0, 0, 0.2);
+}
+.todoItem .delete {
+    display: none;
+}
 
-/* 
+.todoItem:hover .delete {
+    display: inline;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+h1 {
+    font-family: Courier, monospace;
+    color: rgba(214, 5, 5, 0.37);
+}
+ul {
+    list-style-type: none;
+}
 
-*/
+input {
+    height: 50px;
+    border: 0.1px solid gainsboro;
+}
+.task {
+    font-family: Courier, monospace;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-bottom: 0.1px solid gainsboro;
+    border-left: 0.1px solid gainsboro;
+    border-right: 0.1px solid gainsboro;
+    align-items: center;
+}
+
+.taskCounter {
+    font-family: monospace;
+    font-size: small;
+    height: 30px;
+    color: gainsboro;
+    margin: 0;
+    padding-left: 15px;
+    border-bottom: 0.1px solid gainsboro;
+    border-left: 0.1px solid gainsboro;
+    border-right: 0.1px solid gainsboro;
+    align-items: center;
+}
+
+.taskCounter p {
+    padding-left: 1px;
+    padding-top: 20px;
+}
+
+.taskCounter1 {
+    height: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-bottom: 0.1px solid gainsboro;
+    border-left: 0.1px solid gainsboro;
+    border-right: 0.1px solid gainsboro;
+}
+
+.taskCounter2 {
+    height: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-bottom: 0.1px solid gainsboro;
+    border-left: 0.1px solid gainsboro;
+    border-right: 0.1px solid gainsboro;
+}
