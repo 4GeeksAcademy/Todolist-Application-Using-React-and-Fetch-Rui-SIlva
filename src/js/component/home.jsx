@@ -52,10 +52,15 @@ const Home = () => {
 				<div className="d-flex justify-content-left taskCounter">
 					<p>{todoList.length > 0 ? todoList.length : "" } items left</p>
 				</div>
-				<div className="d-flex taskCounter1">
+				<div className="CounterDiv1">
+					<div className="d-flex taskCounter1">
+					</div>
 				</div>
-				<div className="d-flex taskCounter2">
+				<div className="CounterDiv1">
+					<div className="d-flex taskCounter2">
+					</div>
 				</div>
+				
 			</div>
 		</div>
 	);
