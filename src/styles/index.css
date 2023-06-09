@@ -3,9 +3,7 @@
     height: auto;
 }
 .mainContainer {
-    -webkit-box-shadow: -3px 0px 65px 26px rgba(189,189,189,1);
-    -moz-box-shadow: -3px 0px 65px 26px rgba(189,189,189,1);
-    box-shadow: -3px 0px 65px 26px rgba(189,189,189,1);
+    box-shadow: -3px 0px 65px 15px rgba(189,189,189,1);
 }
 .todoItem .delete {
     display: none;
@@ -78,5 +76,5 @@ input {
 }
 
 .CounterDiv1 {
-    background-color: rgb(216, 214, 214);
+    background-color: rgb(221, 221, 221);
 }

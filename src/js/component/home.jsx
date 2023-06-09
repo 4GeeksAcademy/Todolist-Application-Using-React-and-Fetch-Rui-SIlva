@@ -21,7 +21,7 @@ const Home = () => {
 
 	return (
 		<div className="container pt-3 mt-4">
-			<div className="container w-100 text-center pt-3">
+			<div className="container w-100 text-center pt-3 pb-4">
 			<h1>My ToDo List</h1>
 			</div>
 			<div className="mainContainer">
