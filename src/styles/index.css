@@ -13,9 +13,14 @@
     display: inline;
 }
 
-h1 {
+.title {
     font-family: Courier, monospace;
     color: rgba(214, 5, 5, 0.37);
+}
+.enterName {
+    font-family: monospace;
+    font-size:larger;
+    color: darkgray;
 }
 ul {
     list-style-type: none;
