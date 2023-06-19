@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const Home = () => {
 	let [tasks, setTasks] = useState([]);
-	let [newTask, setTNewTask] = useState({});
+	let [newTask, setTNewTask] = useState("");
 	let [user, setUser] = useState('')
 
 	useEffect(() => {
@@ -42,7 +42,7 @@ const Home = () => {
 	}
 
 	const updateTasks = () => {
-		const newTasks = [...tasks, newTask]
+		const newTasks = [...tasks, {label: newTask, done: false}];
 		setTasks(newTasks)
 		fetch(`https://assets.breatheco.de/apis/fake/todos/user/${user}`, {
 			method: 'put',
@@ -55,7 +55,9 @@ const Home = () => {
 		.catch((Err) => {
 			console.log(Err);
 		});
+		setTNewTask("")
 	}
+	
 	const deletetasks = (index) => {
 		let reduceList = [...tasks]
 		reduceList.splice(index, 1);
@@ -126,9 +128,9 @@ const Home = () => {
 							className="w-100 ps-3"
 							type="text"
 							placeholder="Enter a task"
-							value={newTask.label}
+							value={newTask}
 							onChange={(e) => {
-								setTNewTask({label: e.target.value, done: false});
+								setTNewTask(e.target.value);
 							}}
 							onKeyDown={(e) => {
 								if (e.key === "Enter" && user != "") {
