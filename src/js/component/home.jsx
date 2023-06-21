@@ -87,6 +87,9 @@ const Home = () => {
 		.catch(error => {
 			console.log(error);
 		});
+		alert(`${user} is deleted...`)
+		setTasks([])
+		setUser('')
 	}
 
 	return (
