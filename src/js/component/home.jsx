@@ -59,9 +59,7 @@ const Home = () => {
 	}
 	
 	const deletetasks = (index) => {
-		let reduceList = [...tasks]
-		reduceList.splice(index, 1);
-		console.log(reduceList);
+		let reduceList = tasks.slice(0, index).concat(tasks.slice(index+1));
 		setTasks(reduceList);
 		fetch(`https://assets.breatheco.de/apis/fake/todos/user/${user}`, {
 				method: 'put',
@@ -144,11 +142,11 @@ const Home = () => {
 					</div>
 					<div className="d-flex justify-content-center"> 
 						<ul className="w-100 p-0 m-0">
-							{tasks.map((task) => {
-								return <li>
+							{tasks.map((task, index) => {
+								return <li key={index}>
 											<div className="d-flex task justify-content-between">
 												<div className="todoItem pb-1">{task.label}</div>
-												<span><i class="far fa-times-circle fs-5 pb-1 pe-3 delete" onClick={deletetasks}></i></span>
+												<span><i className="far fa-times-circle fs-5 pb-1 pe-3 delete" onClick={() => deletetasks(index)}></i></span>
 											</div>
 										</li>;
 							})}
